@@ -8,7 +8,7 @@ body {
     margin: 0;
     background-color: #FFFFFF;
     
-    font-family:    Source Sans Pro;
+    font-family:    'Source Sans Pro', sans-serif;
     color:          #FFFFFF;
 }
 
@@ -75,7 +75,7 @@ body {
     
     box-shadow: 3px 3px 0px #A85133;
     
-    font-family:    Source Sans Pro;
+    font-family:    'Source Sans Pro', sans-serif;
     font-size:      20pt;
     color:          #FFFFFF;
 }
