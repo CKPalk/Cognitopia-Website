@@ -34,7 +34,7 @@ body {
 
 /* ----- Classes ----- */
 .center     { text-align: center; }
-.large_text { font-size:    20pt; }
+.large_text { font-size:    25pt; }
 .thin_text  { font-weight:   300; }
 .unselectable {
     -moz-user-select:       none;
@@ -85,13 +85,18 @@ body {
 
 .arrow { width: 8%; }
 
+.column {
+    display:    inline-block;
+    width:      200px;
+    margin:     10px;
+}
+
 /* ----- Individual Panel Work ----- */
 /* Home Page */
 #panel_one {
     height:     320px;
     width:      100%;
-    
-    
+        
 }
     #LearnHowButton {
         margin-top: 40px;
