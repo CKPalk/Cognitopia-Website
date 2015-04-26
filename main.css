@@ -1,0 +1,67 @@
+/*
+ * Authors: Cameron Palk and Joel Benner
+ * Website: Cognitopia.com
+ * Date: April 2015
+ */
+
+body {
+    margin: 0;
+    background-color: #FFFFFF;
+}
+
+/*  Header-Menu Bar: 
+    Dimensions: 40px x 100% (Page width)
+    Colors: #FFFFFF, #5E7273
+    Img Src: 
+*/
+.header {
+    background-color: #FFFFFF;
+    
+    height:     40px;
+    width:      100%;
+    
+    box-sizing:             border-box;
+        -moz-box-sizing:    border-box;
+        -webkit-box-sizing: border-box;
+    
+    border-bottom-color:    #5E7273;
+    border-bottom-style:    solid;
+    border-bottom-width:    3px;
+}
+
+
+/* Class work */
+.center     { text-align: center; }
+.blue_panel { background-color: #3F4F4F; }
+
+.vertical_center {
+    position:   relative;
+    top:        30%;
+}
+
+.default_button {
+    
+}
+
+
+/* HomePage Blue Panel
+    
+
+*/
+#panel_one {
+    height:     320px;
+    width:      100%;
+    
+    font-family:    Source Sans Pro;
+    font-size:      20pt;
+    color:          #FFFFFF;
+    
+}
+
+    #LearnHowButton {
+        margin-top: 40px;
+        
+        font-family:    Source Sans Pro;
+        font-size:      20pt;
+        color:          #FFFFFF;
+    }
