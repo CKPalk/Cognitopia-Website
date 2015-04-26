@@ -7,6 +7,9 @@
 body {
     margin: 0;
     background-color: #FFFFFF;
+    
+    font-family:    Source Sans Pro;
+    color:          #FFFFFF;
 }
 
 /*  Header-Menu Bar: 
@@ -30,9 +33,10 @@ body {
 }
 
 
-/* Class work */
+/* Classes */
 .center     { text-align: center; }
-.blue_panel { background-color: #3F4F4F; }
+.blue_panel { background-color: #3F4F4F; color: #FFFFFF; padding-top: 20px; padding-bottom: 20px; }
+.white_panel {background-color: #FFFFFF; color: #638483; padding-top: 20px; padding-bottom: 20px; }
 
 .vertical_center {
     position:   relative;
@@ -40,6 +44,17 @@ body {
 }
 
 .default_button {
+    border:     none;
+    outline:    none;
+    
+    border-radius: 6px;
+    
+    padding: 5px;
+    background-color: #DB6945;
+    
+    box-shadow: 3px 3px 0px #A85133;
+}
+.default_button:active {
     
 }
 
