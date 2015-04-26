@@ -36,18 +36,27 @@ body {
 .center     { text-align: center; }
 .large_text { font-size:    20pt; }
 .thin_text  { font-weight:   300; }
+.unselectable {
+    -moz-user-select:       none;
+    -webkit-user-select:    none;
+    -ms-user-select:        none;
+    user-select:            none;
+    
+    -webkit-user-drag:      none;
+    user-drag:              none;
+}
 
-.blue_panel { 
+.panel {
+    padding-top:        30px; 
+    padding-bottom:     30px; 
+}
+.blue_back { 
     background-color:   #3F4F4F; 
     color:              #FFFFFF; 
-    padding-top:        20px; 
-    padding-bottom:     20px; 
 }
-.white_panel {
+.white_back {
     background-color:   #FFFFFF; 
     color:              #638483; 
-    padding-top:        20px; 
-    padding-bottom:     20px; 
 }
 
 .vertical_center {
@@ -74,6 +83,7 @@ body {
 
     }
 
+.arrow { width: 8%; }
 
 /* ----- Individual Panel Work ----- */
 /* Home Page */
