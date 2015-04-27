@@ -34,8 +34,10 @@ body {
 
 /* ----- Classes ----- */
 .center     { text-align: center; }
+.medium_text{ font-size:    16pt; }
 .large_text { font-size:    25pt; }
 .thin_text  { font-weight:   300; }
+.sectionHead{ margin-bottom: 30px; margin-top: 20px; }
 .unselectable {
     -moz-user-select:       none;
     -webkit-user-select:    none;
@@ -80,15 +82,51 @@ body {
     color:          #FFFFFF;
 }
     .default_button:active {
-
+        
     }
 
-.arrow { width: 8%; }
+.arrow_image  { width: 8%; min-width: 80px; max-width: 100px; }
 
 .column {
     display:    inline-block;
-    width:      200px;
-    margin:     10px;
+    width:      235px;
+    height:     375px;
+    position: relative;
+    
+    vertical-align: top;
+    
+    margin-right:   25px;
+    margin-left:    25px;
+    margin-top:     40px;
+    margin-bottom:  60px;
+    
+}
+    .column_image { 
+        width: 70%;
+        margin-bottom: 40px;
+    }
+    .column_title {
+        font-size: 22pt;
+    }
+    .column_text {
+        color: #808284;
+    }
+    .column_button {
+        /* center buttons to bottom of div */
+        position:   absolute;
+        bottom:     0px;
+        left:       0px;
+        right:      0px;
+        margin-left:    auto;
+        margin-right:   auto;
+        
+        width: 100px;
+        font-size: 16pt;
+    }
+
+.signup_wrapper {
+    display: inline-block;
+    width:          650px;
 }
 
 .javascriptButton {
@@ -111,7 +149,7 @@ body {
         
 }
     #LearnHowButton {
-        margin-top: 40px;
+        margin-top: 10px;
     }
 
 #panel_two {
