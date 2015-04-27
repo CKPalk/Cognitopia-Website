@@ -91,6 +91,18 @@ body {
     margin:     10px;
 }
 
+.javascriptButton {
+    margin-left: 100px;
+    margin-right: 100px;
+    font-family:    'Source Sans Pro', sans-serif;
+    padding-bottom: 15px;
+    line-height: 23px
+    
+}
+#test {
+    
+}
+
 /* ----- Individual Panel Work ----- */
 /* Home Page */
 #panel_one {
