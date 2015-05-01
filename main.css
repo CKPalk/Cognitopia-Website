@@ -72,13 +72,18 @@ body {
 
 /* TEXT EFFECTS */
 .center     { text-align: center; }
+.xsmall_text{ font-size:    10pt; }
 .small_text { font-size:    12pt; }
+.xcarousel_text { font-size: 13pt; }
+.scarousel_text { font-size: 14pt; }
+.mcarousel_text { font-size: 15pt; }
 .medium_text{ font-size:    16pt; }
 .large_text { font-size:    28pt; }
 .thin_text  { font-weight:   300; }
 .form_text  { font-size:    14pt; }
 .sectionHead{ margin-bottom:30px; 
               margin-top:   20px; }
+.light_text { opacity:      .7  ; }
 .unselectable {
     -moz-user-select:       none;
     -webkit-user-select:    none;
@@ -114,6 +119,19 @@ body {
 .bottom_space {
     margin-bottom: 50px;   
 }
+
+.carousel_button {
+    background: none;
+    box-shadow: none;
+    top: -60px;
+    border:     none;
+    height:     60;
+    width:      60;
+
+}
+    .carousel_button:active {
+        
+    }
 
 .default_button {
     border:     none;
@@ -161,7 +179,7 @@ body {
 }
 .carousel_center {
     width:         400px;
-    min-height:    720px;
+    padding-bottom: 50px;
 }
     .carousel_center_image_wrapper {
         width:  300px;
@@ -205,12 +223,12 @@ body {
         margin-bottom: 20px;
     }
 .carousel_left, .carousel_right {
-    height: 220;
+    height: 240;
     width:  18%;
     max-width: 180px;
     position: absolute;
     top:      155px;
-    background-color: #FFFFFF;
+    background-color: #DBDCDE;
     color: #DB6944;
 }
     .carousel_side_title {
@@ -219,6 +237,7 @@ body {
 .carousel_left {
     left: 0px;
     border-radius: 0px 30px 30px 0px;
+    
 }
 .carousel_right {
     right: 0px;
