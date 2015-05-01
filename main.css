@@ -1,15 +1,25 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
 /*
  * Authors: Cameron Palk and Joel Benner
  * Website: Cognitopia.com
  * Date: April 2015
+
+Hours:
++1
++8
++3
+
+
+
  */
+
 
 body {
     margin: 0;
     background-color: #FFFFFF;
     
     font-family:    'Source Sans Pro', sans-serif;
-    color:          #FFFFFF;
+    color:            #FFFFFF;
 }
 
 /*  Header-Menu Bar: 
@@ -17,10 +27,13 @@ body {
     Img Src: 
 */
 .header {
-    background-color: #FFFFFF;
+    position:  fixed;
+    z-index:     100; /* above everything else */
     
     height:     40px;
     width:      100%;
+    
+    background-color:       #FFFFFF;
     
     box-sizing:             border-box;
         -moz-box-sizing:    border-box;
@@ -30,14 +43,42 @@ body {
     border-bottom-style:    solid;
     border-bottom-width:    3px;
 }
+    .header_content_wrapper {
+        width:        100%;
+        max-width:   860px;
+        height:       100%;
+        margin-left:  auto;
+        margin-right: auto;
+        overflow: hidden;
+    }
+        .head_logo {
+            padding-top:    4px;
+            height:        32px;
+            padding-bottom: 2px;
+            padding-right: 20px;
+        }
+        .head_link {
+            text-decoration: none;
+            color:        #5E7273;
+            
+            padding-top:    6px;
+            height:        32px;
+            padding-left:  20px;
+            padding-right: 20px;
+        }
 
 
 /* ----- Classes ----- */
+
+/* TEXT EFFECTS */
 .center     { text-align: center; }
+.small_text { font-size:    12pt; }
 .medium_text{ font-size:    16pt; }
-.large_text { font-size:    25pt; }
+.large_text { font-size:    28pt; }
 .thin_text  { font-weight:   300; }
-.sectionHead{ margin-bottom: 30px; margin-top: 20px; }
+.form_text  { font-size:    14pt; }
+.sectionHead{ margin-bottom:30px; 
+              margin-top:   20px; }
 .unselectable {
     -moz-user-select:       none;
     -webkit-user-select:    none;
@@ -48,9 +89,13 @@ body {
     user-drag:              none;
 }
 
+
+/* DISPLAY ELEMS */
+.left_align  { float: left;  }
+.right_align { float: right; }
 .panel {
     padding-top:        30px; 
-    padding-bottom:     30px; 
+    padding-bottom:     50px; 
 }
 .blue_back { 
     background-color:   #3F4F4F; 
@@ -60,10 +105,14 @@ body {
     background-color:   #FFFFFF; 
     color:              #638483; 
 }
-
-.vertical_center {
-    position:   relative;
-    top:        30%;
+.page_title {
+    margin-top: 160px;
+}
+.top_space {
+    margin-top: 100px;
+}
+.bottom_space {
+    margin-bottom: 50px;   
 }
 
 .default_button {
@@ -72,62 +121,206 @@ body {
     
     border-radius: 6px;
     
-    padding: 5px;
+    padding-top:    5px;
+    padding-bottom: 5px;
+    padding-left:  10px;
+    padding-right: 10px;
     background-color: #DB6945;
     
     box-shadow: 3px 3px 0px #A85133;
     
-    font-family:    'Source Sans Pro', sans-serif;
-    font-size:      20pt;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:         22pt;
     color:          #FFFFFF;
+    white-space:        pre;
 }
     .default_button:active {
         
     }
 
 .arrow_image  { width: 8%; min-width: 80px; max-width: 100px; }
+.blue_arrow {
+    background-image: url(images/All/Dark_Arrow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: top;
+    height: 64px;
+}
+.white_arrow {
+    background-image: url(images/All/Light_Arrow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: top;
+    height: 64px;
+}
 
-.column {
-    display:    inline-block;
-    width:      235px;
-    height:     375px;
-    position: relative;
-    
-    vertical-align: top;
-    
+.medium_column, .long_column, .carousel_center {
+    display:inline-block;
+    position:   relative;
+    vertical-align:  top;
+}
+.carousel_center {
+    width:         400px;
+    min-height:    720px;
+}
+    .carousel_center_image_wrapper {
+        width:  300px;
+        height: 300px;
+        margin:  auto;
+        background-color: #FFFFFF;
+        border-radius:        50%;
+    }
+    .carousel_center_image_wrapper img {
+        height: 180px;
+        width:  180px;
+        
+        /* center image in wrapper */
+        padding-top: calc((100% - 180px) / 2);
+    }
+    .pane_selection {
+        display: inline-block;
+        height:  14px;
+        width:   14px;
+        
+        border-radius: 50%;
+        border-color:  #DB6944;
+        border-style:  solid;
+        
+        margin-top:   14px;
+        margin-left:  4px;
+        margin-right: 4px;
+    }
+    .carousel_text {
+        
+    }
+        .carousel_bullet {
+            text-align:  left;
+            max-width:    70%;
+            margin-left: auto;
+            margin-right:auto;
+        }
+    .carousel_button {
+        line-height: 30px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+.carousel_left, .carousel_right {
+    height: 220;
+    width:  18%;
+    max-width: 180px;
+    position: absolute;
+    top:      155px;
+    background-color: #FFFFFF;
+    color: #DB6944;
+}
+    .carousel_side_title {
+        
+    }
+.carousel_left {
+    left: 0px;
+    border-radius: 0px 30px 30px 0px;
+}
+.carousel_right {
+    right: 0px;
+    border-radius: 30px 0px 0px 30px;
+}
+.long_column {
+    width:         235px;
+    height:        375px;
     margin-right:   25px;
     margin-left:    25px;
     margin-top:     40px;
     margin-bottom:  60px;
-    
 }
-    .column_image { 
-        width: 70%;
+.medium_column {
+    width:         300px;
+    min-height:    400px;
+    margin-right:   45px;
+    margin-left:    45px;
+    margin-top:      0px;
+    margin-bottom:  10px;
+}
+    .column_medium_image { 
+        width:          70%;
         margin-bottom: 40px;
     }
+    .column_large_image {
+        width: 200px;
+        margin-bottom:      40px;
+        
+        border: 5px solid white;
+        border-radius:      50%;
+    }
+    .white_border {
+        
+    }
     .column_title {
-        font-size: 22pt;
+        font-size:     22pt;
     }
     .column_text {
-        color: #808284;
+        color:      #808284;
     }
     .column_button {
         /* center buttons to bottom of div */
-        position:   absolute;
-        bottom:     0px;
-        left:       0px;
-        right:      0px;
-        margin-left:    auto;
-        margin-right:   auto;
-        
-        width: 100px;
-        font-size: 16pt;
+        position:    absolute;
+        bottom:           0px;
+        left:             0px;
+        right:            0px;
+        margin-left:     auto;
+        margin-right:    auto;
+        width:          100px;
+        font-size:       14pt;
     }
 
-.signup_wrapper {
-    display: inline-block;
-    width:          650px;
+.text_wrapper {
+    width:      100%;
+    max-width: 700px;
+    margin:     auto;
+    text-align: left;
+    color:   #808284;
 }
+
+.blurb_wrapper {
+    padding-top: 16px;
+}
+
+.signup_wrapper {
+    max-width: 650px;
+    margin:     auto;
+}
+    .form_wrapper {
+        width:          100%;
+        max-width:     350px;
+        margin:         auto;
+        margin-top:     20px;
+    }
+        .input_title {
+            margin-top: 40px;
+            width:       80%;
+            text-align: left;
+            margin-left:  10;
+        }
+        .input {
+            border:  none;
+            outline: none;
+            overflow: hidden;
+            
+            width:         100%;
+            border-radius:  6px;
+            
+            padding-left:  15px;
+            padding-top:    3px;
+            padding-bottom: 3px;
+
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size:    13pt;
+            font-style: italic;
+            color:     #808284;
+        }
+    .form_submit {
+        padding-top:    50px;
+        padding-bottom: 50px;
+    }
 
 .javascriptButton {
     margin-left: 100px;
@@ -144,13 +337,16 @@ body {
 /* ----- Individual Panel Work ----- */
 /* Home Page */
 #panel_one {
-    height:     320px;
-    width:      100%;
+    min-height: 320px;
+    width:       100%;
         
 }
-    #LearnHowButton {
-        margin-top: 10px;
+    #text_popup {
+        min-height: 200px;
     }
+        #LearnHowButton {
+            margin-top: 10px;
+        }
 
 #panel_two {
     
