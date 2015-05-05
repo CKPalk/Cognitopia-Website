@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cognitopia - About</title>
     <link rel="stylesheet" type="text/css" href="main.css">
+    <script type= "text/javascript" src="jquery.js"></script>
+    
 </head>
 <body>
     <!-- ALL PAGEs CONTENT-->
@@ -21,46 +23,49 @@
     <!-- END ALL PAGES CONTENT -->
     
     <!-- Panel One -->
-    <div class="blue_back panel center" id="panel_one">
-        <div class="top_space">
-            <div class="carousel">
-                <div class="carousel_center_image_wrapper" id="product_image">
-                    <img class="carousel_center_image" src="images/All/Picture_Planner.png">
+    <div class= "divSwap">
+        <div class="blue_back panel center" id="panel_one">
+            <div class="top_space">
+                <div class="carousel">
+                    <div class="carousel_center_image_wrapper" id="product_image">
+                        <img class="carousel_center_image" src="images/All/Picture_Planner.png">
+                    </div>
+                    <a><div class="pane_selection"></div></a>
+                    <a><div class="pane_selection"></div></a>
+                    <a><div class="pane_selection"></div></a>
+                    <br><br><br><br>
+                    <div class="large_text thin_text" id="product_title">Picture Planner</div>
+                    <div class="carousel_text xsmall_text thin_text blurb_wrapper" id="product_info">
+                        I think we should add maybe one or two lines of text here explaining a little bit about it, then go into bullet points
+                        <ul class="carousel_bullet">
+                            <li>Add an activity</li>
+                            <li>Take a picture of the things you need</li>
+                            <li>Check off each item as you confirm you have it</li>
+                            <li>Share your accomplishments</li>
+                            <li>Have a great day</li>
+                        </ul>
+                    </div>
+                    <button class="default_button column_button default_button" type="button">TRY IT</button>
+
+                    <!-- Left Carousel-->
+                <button id= "buttonTest" class="carousel_left" type= "button" onclick= "goalGuideSwap();">
+                    <div class="medium_text thin_text carousel_side_title">
+                        Goal Guide
+                    </div>
+                    <img class="carousel_side_arrow" src= "images\Products\Product_Arrow_Left.png">
+                </button>
+                <!-- Right Carousel-->
+                <button class="carousel_right">
+                    <div class="medium_text thin_text carousel_side_title">
+                        ScanDo!
+                    </div>
+                    <img class="carousel_side_arrow" src= "images\Products\Product_Arrow_Right.png">
+                </button>
                 </div>
-                <a><div class="pane_selection"></div></a>
-                <a><div class="pane_selection"></div></a>
-                <a><div class="pane_selection"></div></a>
-                <br><br><br><br>
-                <div class="large_text thin_text" id="product_title">Picture Planner</div>
-                <div class="carousel_text xsmall_text thin_text blurb_wrapper" id="product_info">
-                    I think we should add maybe one or two lines of text here explaining a little bit about it, then go into bullet points
-                    <ul class="carousel_bullet">
-                        <li>Add an activity</li>
-                        <li>Take a picture of the things you need</li>
-                        <li>Check off each item as you confirm you have it</li>
-                        <li>Share your accomplishments</li>
-                        <li>Have a great day</li>
-                    </ul>
-                </div>
-                <button class="default_button column_button default_button" type="button">TRY IT</button>
-                
-                <!-- Left Carousel-->
-            <button class="carousel_left">
-                <div class="medium_text thin_text carousel_side_title">
-                    Goal Guide
-                </div>
-                <img class="carousel_side_arrow" src= "images\Products\Product_Arrow_Left.png">
-            </button>
-            <!-- Right Carousel-->
-            <button class="carousel_right">
-                <div class="medium_text thin_text carousel_side_title">
-                    ScanDo!
-                </div>
-                <img class="carousel_side_arrow" src= "images\Products\Product_Arrow_Right.png">
-            </button>
             </div>
         </div>
     </div>
+    
     <div class="blue_arrow white_back center"></div>
     
     <!-- Panel Two -->
