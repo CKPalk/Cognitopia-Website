@@ -4,12 +4,6 @@
  * Website: Cognitopia.com
  * Date: April 2015
 
-Hours:
-+1
-+8
-+3
-
-
 
  */
 
@@ -121,10 +115,6 @@ body {
     margin-bottom: 50px;   
 }
 
-#buttonTest {
-    
-}
-
 .carousel_button {
     background: none;
     box-shadow: none;
@@ -156,6 +146,7 @@ body {
     font-size:         22pt;
     color:          #FFFFFF;
     white-space:        pre;
+    text-transform: uppercase;
 }
     .default_button:active {
         
@@ -187,20 +178,51 @@ body {
     width:          100%;
     padding-bottom: 50px;
 }
-    .carousel_center_image_wrapper {
-        width:  200px;
-        height: 200px;
-        margin:  auto;
-        background-color: #FFFFFF;
-        border-radius:        50%;
+    .carousel_center_image{
+        width:     90%;
+        max-width: 400px;
     }
-    .carousel_center_image_wrapper img {
-        height: 140px;
-        width:  140px;
+    .carousel_form_wrapper {
+        margin-top:    30px;
+        margin-bottom: 50px;
+    }
+    .carousel_form, .carousel_form_selected {
+        display: inline-block;
+        width: 50%;
+        max-width: 160px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+    .carousel_form button {
+        border: none;
+        outline: none;
+        width: 100%;
         
-        /* center image in wrapper */
-        padding-top: calc((100% - 140px) / 2);
+        height: 32px;
+        border-radius: 5px;
+        background-color: #3F4F4F;
+        color: #FFFFFF;
+        border: 2px solid #FFFFFF;
     }
+        .carousel_form button:active {
+            background-color: #659888;
+            border-color: #659888;
+            color: #FFFFFF;
+            
+        }
+    .carousel_form_selected button {
+        border: none;
+        outline: none;
+        width: 100%;
+        
+        height: 32px;
+        border-radius: 5px;
+        background-color: #659888;
+        color: #FFFFFF;
+        border: 2px solid #FFFFFF;
+    }
+        
     .pane_selection {
         display: inline-block;
         height:  14px;
@@ -227,11 +249,11 @@ body {
         }
 .carousel_left, .carousel_right {
     max-height: 240px;
-    height:     180px;
-    width:      18%;
+    height:     120px;
+    width:      10%;
     max-width:  180px;
     position:   absolute;
-    top:        30px;
+    top:        10%;
     background-color: #FFFFFF;
     color:            #DB6944;
     
@@ -244,7 +266,7 @@ body {
         left:  0;
         right: 0;
         margin: auto;
-        
+        text-overflow: ellipsis;
     }
     .carousel_side_arrow {
         position: absolute;
@@ -253,6 +275,7 @@ body {
         left:   0;
         margin: auto;
     }
+
 .carousel_left {
     left: 0px;
     border-radius: 0px 30px 30px 0px;
@@ -272,6 +295,9 @@ body {
     
     background-color: #FFFFFF;
     color:            #808284;
+}
+.article p {
+       text-indent: 8%;
 }
     .article_head {
         margin: 15px;
@@ -306,7 +332,7 @@ body {
     
     padding-right:    2%;
     padding-left:     2%;
-    margin-bottom:  30px;
+    padding-bottom:  80px;
 }
     .column_medium_image { 
         width:          70%;
@@ -314,13 +340,10 @@ body {
     }
     .column_large_image {
         width: 200px;
-        margin-bottom:      40px;
+        margin-bottom: 30px;
         
         border: 5px solid white;
         border-radius:      50%;
-    }
-    .white_border {
-        
     }
     .column_title {
         font-size:     22pt;
@@ -392,6 +415,7 @@ body {
             font-style: italic;
             color:     #808284;
             background-color: #EEEEEE;
+            text-indent: 10px;
         }
     .form_submit {
         padding-top:    50px;
