@@ -189,42 +189,46 @@ body {
         margin-top:    30px;
         margin-bottom: 50px;
     }
-    .carousel_form, .carousel_form_selected {
+    .product_button {
         display: inline-block;
-        width: 50%;
+        
+        width: 100%;
         max-width: 160px;
+        
         padding-left: 10px;
         padding-right: 10px;
-        padding-bottom: 10px;
-    }
-    .carousel_form button {
+        
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        
         border: none;
         outline: none;
-        width: 100%;
         
         height: 32px;
         border-radius: 5px;
-        background-color: #3F4F4F;
-        color: #FFFFFF;
-        border: 2px solid #FFFFFF;
     }
-        .carousel_form button:active {
+        .product_button:active {
             background-color: #659888;
             border-color: #659888;
             color: #FFFFFF;
             
         }
-    .carousel_form_selected button {
-        border: none;
-        outline: none;
-        width: 100%;
-        
-        height: 32px;
-        border-radius: 5px;
-        background-color: #659888;
-        color: #FFFFFF;
-        border: 2px solid #FFFFFF;
-    }
+        #picture_planner_button {
+            background-color: #659888;
+            color: #FFFFFF;
+            border: 2px solid #659888;
+        }
+        #goal_guide_button {
+            background-color: #3F4F4F;
+            color: #FFFFFF;
+            border: 2px solid #FFFFFF;
+        }
+        #scando_button {
+            background-color: #3F4F4F;
+            color: #FFFFFF;
+            border: 2px solid #FFFFFF;
+        }
         
     .pane_selection {
         display: inline-block;
@@ -467,14 +471,10 @@ body {
             margin-top: 10px;
         }
 
-#panel_two {
-    
-}
+#picture_planner_top { display: block; }
+#goal_guide_top      { display: none;  }
+#scando_top          { display: none;  }
 
-#panel_three {
-    
-}
-
-#article_center {
-       
-}
+#picture_planner_mid { display: block; }
+#goal_guide_mid      { display: none;  }
+#scando_mid          { display: none;  }

@@ -1,3 +1,5 @@
+// --- Index page javascript ---
+
 function replaceLearnMore() {
     "use strict";
     
@@ -11,28 +13,180 @@ function replaceLearnMore() {
 }
 
 
-function switchToPicturePlanner() {
+// --- Products page javascript ---
+
+window.onload = function pageLoad() {
+    // get user_input from page hash
+    var user_input = (location.hash).replace('#','');
+    
+    // display correct content based on hash
+    if (user_input == "PicturePlanner") {
+        displayPicturePlanner();   
+    }
+    else if (user_input == "GoalGuide") {
+        displayGoalGuide();
+    }
+    else if (user_input == "ScanDo") {
+        displayScanDo();   
+    }
+    
+}
+
+function displayPicturePlanner() {
     "use strict";
+    var btn_PicturePlanner, btn_GoalGuide, btn_ScanDo,
+        top_PicturePlanner, top_GoalGuide, top_ScanDo,
+        mid_PicturePlanner, mid_GoalGuide, mid_ScanDo,
+        product_image;
     
-    var top_image, top_title, top_info, mid_content, mid_content_html, top_info_html, top_image_src;
+    btn_PicturePlanner = document.getElementById('picture_planner_button');
+    btn_GoalGuide      = document.getElementById('goal_guide_button');
+    btn_ScanDo         = document.getElementById('scando_button');
     
-    // locations of elements to switch
-    top_image   = document.getElementById('carousel_main_image');
-    top_title   = document.getElementById('product_title');
-    top_info    = document.getElementById('product_info');
-    mid_content = document.getElementById('product_content');
+    top_PicturePlanner = document.getElementById('picture_planner_top');
+    top_GoalGuide      = document.getElementById('goal_guide_top');
+    top_ScanDo         = document.getElementById('scando_top');
     
-    // content to switch TO
-    top_info_html = "I think we should add maybe one or two lines of text here explaining a little bit about it, then go into bullet points<ul class='carousel_bullet'><li>Add an activity</li><li>Take a picture of the things you need</li><li>Check off each item as you confirm you have it</li><li>Share your accomplishments</li><li>Have a great day</li></ul>";
-    top_image_src = "images/Products/PicturePlanner.png";
-    mid_content_html = "<div class='sectionHead large_text thin_text'>Keeping connected</div><div class='product_content medium_top_space right_column_fill'></div><div class='product_content medium_top_space left_column_fill'><div class='medium_text' id='product_content_title'>Connecting users, caregivers, and mentors</div><div class='small_text thin_text blurb_wrapper' id='product_content_info'>Who matters to you? All of our apps let the user define who gets notified about things like activity completions or goal accomplishments. Some of us need more encouragement and guidance than others, and even little victories can be shared and celebrated. That's why when you check an item off your calendar, or score high on a math test, our apps make sure you can share your accomplishments with those you care about.</div></div>";
+    mid_PicturePlanner = document.getElementById('picture_planner_mid');
+    mid_GoalGuide      = document.getElementById('goal_guide_mid');
+    mid_ScanDo         = document.getElementById('scando_mid');
     
-    // swap work
-    top_image.src = top_image_src;
-    top_title.textContent = "Picture Planner";
-    top_info.innerHTML = top_info_html;
+    product_image      = document.getElementById('product_image');
     
-    mid_content.innerHTML = mid_content_html;
+    // Change product image
+    product_image.src = "images/Products/PicturePlanner.png";
     
+    // Unselect other buttons
+    btn_ScanDo.style.backgroundColor = "#3F4F4F";
+    btn_ScanDo.style.color = "#FFFFFF";
+    btn_ScanDo.style.border = "2px solid #FFFFFF";
+    btn_GoalGuide.style.backgroundColor = "#3F4F4F";
+    btn_GoalGuide.style.color = "#FFFFFF";
+    btn_GoalGuide.style.border = "2px solid #FFFFFF";
     
+    // Select Picture Planner button
+    btn_PicturePlanner.style.backgroundColor = "#659888";
+    btn_PicturePlanner.style.color = "#FFFFFF";
+    btn_PicturePlanner.style.border = "2px solid #659888";
+    
+    // Hide other top contents
+    top_GoalGuide.style.display = "none";
+    top_ScanDo.style.display    = "none";
+    
+    // Show Picture Planner top
+    top_PicturePlanner.style.display = "block";
+    
+    // Hide other mid contents
+    mid_GoalGuide.style.display = "none";
+    mid_ScanDo.style.display    = "none";
+    
+    //Show Picture Planner mid
+    mid_PicturePlanner.style.display = "block";
+}
+
+
+function displayGoalGuide() {
+    "use strict";
+    var btn_PicturePlanner, btn_GoalGuide, btn_ScanDo,
+        top_PicturePlanner, top_GoalGuide, top_ScanDo,
+        mid_PicturePlanner, mid_GoalGuide, mid_ScanDo,
+        product_image;
+    
+    btn_PicturePlanner = document.getElementById('picture_planner_button');
+    btn_GoalGuide      = document.getElementById('goal_guide_button');
+    btn_ScanDo         = document.getElementById('scando_button');
+    
+    top_PicturePlanner = document.getElementById('picture_planner_top');
+    top_GoalGuide      = document.getElementById('goal_guide_top');
+    top_ScanDo         = document.getElementById('scando_top');
+    
+    mid_PicturePlanner = document.getElementById('picture_planner_mid');
+    mid_GoalGuide      = document.getElementById('goal_guide_mid');
+    mid_ScanDo         = document.getElementById('scando_mid');
+    
+    product_image      = document.getElementById('product_image');
+    
+    // Change product image
+    product_image.src = "images/Products/GoalGuide.png";
+    
+    // Unselect other buttons
+    btn_ScanDo.style.backgroundColor = "#3F4F4F";
+    btn_ScanDo.style.color = "#FFFFFF";
+    btn_ScanDo.style.border = "2px solid #FFFFFF";
+    btn_PicturePlanner.style.backgroundColor = "#3F4F4F";
+    btn_PicturePlanner.style.color = "#FFFFFF";
+    btn_PicturePlanner.style.border = "2px solid #FFFFFF";
+    
+    // Select Goal Guide button
+    btn_GoalGuide.style.backgroundColor = "#659888";
+    btn_GoalGuide.style.color = "#FFFFFF";
+    btn_GoalGuide.style.border = "2px solid #659888";
+    
+    // Hide other top contents
+    top_PicturePlanner.style.display = "none";
+    top_ScanDo.style.display         = "none";
+    
+    // Show Goal Guide top
+    top_GoalGuide.style.display = "block";
+    
+    // Hide other mid contents
+    mid_PicturePlanner.style.display = "none";
+    mid_ScanDo.style.display         = "none";
+    
+    //Show Goal Guide mid
+    mid_GoalGuide.style.display = "block";
+}
+
+
+
+function displayScanDo() {
+    "use strict";
+    var btn_PicturePlanner, btn_GoalGuide, btn_ScanDo,
+        top_PicturePlanner, top_GoalGuide, top_ScanDo,
+        mid_PicturePlanner, mid_GoalGuide, mid_ScanDo,
+        product_image;
+    
+    btn_PicturePlanner = document.getElementById('picture_planner_button');
+    btn_GoalGuide      = document.getElementById('goal_guide_button');
+    btn_ScanDo         = document.getElementById('scando_button');
+    
+    top_PicturePlanner = document.getElementById('picture_planner_top');
+    top_GoalGuide      = document.getElementById('goal_guide_top');
+    top_ScanDo         = document.getElementById('scando_top');
+    
+    mid_PicturePlanner = document.getElementById('picture_planner_mid');
+    mid_GoalGuide      = document.getElementById('goal_guide_mid');
+    mid_ScanDo         = document.getElementById('scando_mid');
+    
+    product_image      = document.getElementById('product_image');
+    
+    // Change product image
+    product_image.src = "images/Products/ScanDo.png";
+    
+    // Unselect other buttons
+    btn_GoalGuide.style.backgroundColor = "#3F4F4F";
+    btn_GoalGuide.style.color = "#FFFFFF";
+    btn_GoalGuide.style.border = "2px solid #FFFFFF";
+    btn_PicturePlanner.style.backgroundColor = "#3F4F4F";
+    btn_PicturePlanner.style.color = "#FFFFFF";
+    btn_PicturePlanner.style.border = "2px solid #FFFFFF";
+    
+    // Select ScanDo button
+    btn_ScanDo.style.backgroundColor = "#659888";
+    btn_ScanDo.style.color = "#FFFFFF";
+    btn_ScanDo.style.border = "2px solid #659888";
+    
+    // Hide other top contents
+    top_GoalGuide.style.display      = "none";
+    top_PicturePlanner.style.display = "none";
+    
+    // Show ScanDo top
+    top_ScanDo.style.display = "block";
+    
+    // Hide other mid contents
+    mid_GoalGuide.style.display      = "none";
+    mid_PicturePlanner.style.display = "none";
+    
+    //Show ScanDo mid
+    mid_ScanDo.style.display = "block";
 }
