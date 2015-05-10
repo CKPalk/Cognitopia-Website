@@ -71,7 +71,9 @@
                             <li>Have a great day</li>
                         </ul>
                     </div>
-                    <button class="default_button column_button default_button" type="button">Try It</button>
+                    <form action="MAILTO:contact@cognitopia.com?subject=Cognitopia - I'm interested in the Picture Planner" method="post" enctype="text/plain">
+                        <button class="default_button column_button default_button" type="submit">Try It</button>
+                    </form>
                 </div>
                 
                 <!-- GOAL GUIDE TOP -->
@@ -86,25 +88,27 @@
                                 <li>Share your progress</li>
                             </ul>
                         </div>
-                        <button class="default_button column_button default_button" type="button">Try It</button>
+                        <form action="MAILTO:contact@cognitopia.com?subject=Cognitopia - I'm interested in the Goal Guide" method="post" enctype="text/plain">
+                            <button class="default_button column_button default_button" type="submit">Try It</button>
+                        </form>
                     </div>
                 
                 <!-- SCANDO TOP -->
                 <div id="scando_top">
-                        <div class="large_text thin_text" id="product_title">ScanDo!</div>
-                        <div class="carousel_text small_text thin_text blurb_wrapper" id="product_info">
-                            I think we should add maybe one or two lines of text here explaining a little bit about it, then go into bullet points
-                            <ul class="carousel_bullet">
-                                <li>Pick a video for something you want to do</li>
-                                <li>Print a unique QR code</li>
-                                <li>Scan the code</li>
-                                <li>Watch and learn</li>
-                            </ul>
-                        </div>
-                        <button class="default_button column_button default_button" type="button">Try It</button>
+                    <div class="large_text thin_text" id="product_title">ScanDo!</div>
+                    <div class="carousel_text small_text thin_text blurb_wrapper" id="product_info">
+                        I think we should add maybe one or two lines of text here explaining a little bit about it, then go into bullet points
+                        <ul class="carousel_bullet">
+                            <li>Pick a video for something you want to do</li>
+                            <li>Print a unique QR code</li>
+                            <li>Scan the code</li>
+                            <li>Watch and learn</li>
+                        </ul>
                     </div>
-                
-                
+                    <form action="MAILTO:contact@cognitopia.com?subject=Cognitopia - I'm interested in ScanDo!" method="post" enctype="text/plain">
+                        <button class="default_button column_button default_button" type="submit">Try It</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -170,25 +174,23 @@
             <div class="medium_text thin_text">
                 Sign up below to stay filled in about what we're doing, to be a beta tester for our new prototypes, or learn more about Cognitopia.
             </div>
-            <form class="form_wrapper" action="POST">
+            <form class="form_wrapper" action="MAILTO:contact@cognitopia.com?subject=Cognitopia - I'd like to know more!" method="post" enctype="text/plain">
                 <div class="input_title form_text thin_text">Your name</div>
                 <input class="input" type="text" name="Name" placeholder="Enter Name...">
                 <div class="input_title form_text thin_text">Your email</div>
                 <input class="input" type="email" name="Email" placeholder="Enter email...">
                 <div class="input_title form_text thin_text">Tell me more about...</div>
                 <select class="input" name="Request">
-                    <option value="" disabled selected>Learn more</option>
-                    <option value="">other 0</option>
-                    <option value="">other 1</option>
-                    <option value="">other 2</option>
-                    <option value="">other 3</option>
-                    <option value="">other 4</option>
-                    <option value="">other 5</option>
+                    <option value="" disabled selected hidden="">Learn more</option>
+                    <option value="I'd like to know more about Cognitopia">Cognitopia</option>
+                    <option value="I'd like to know more about the Goal Guide">Goal Guide</option>
+                    <option value="I'd like to know more about the Picture Planner">Picture Planner</option>
+                    <option value="I'd like to know more about ScanDo!">ScanDo!</option>
                 </select>
+                <div class="form_submit">
+                    <button class="default_button" type="submit">Submit</button>
+                </div>
             </form>
-            <div class="form_submit">
-                <button class="default_button" type="button">Submit</button>
-            </div>
         </div>
     </div>
 </body>

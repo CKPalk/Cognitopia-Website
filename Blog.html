@@ -79,25 +79,23 @@
             <div class="medium_text thin_text">
                 Sign up below to stay filled in about what we're doing, to be a beta tester for our new prototypes, or learn more about Cognitopia.
             </div>
-            <form class="form_wrapper">
+            <form class="form_wrapper" action="MAILTO:contact@cognitopia.com?subject=Cognitopia - I'd like to know more!" method="post" enctype="text/plain">
                 <div class="input_title form_text thin_text">Your name</div>
-                <input class="input" type="text" name="name" placeholder="Enter Name...">
+                <input class="input" type="text" name="Name" placeholder="Enter Name...">
                 <div class="input_title form_text thin_text">Your email</div>
-                <input class="input" type="email" name="email" placeholder="Enter email...">
+                <input class="input" type="email" name="Email" placeholder="Enter email...">
                 <div class="input_title form_text thin_text">Tell me more about...</div>
-                <select class="input">
-                    <option value="" disabled selected>Learn more</option>
-                    <option value="">other 0</option>
-                    <option value="">other 1</option>
-                    <option value="">other 2</option>
-                    <option value="">other 3</option>
-                    <option value="">other 4</option>
-                    <option value="">other 5</option>
+                <select class="input" name="Request">
+                    <option value="" disabled selected hidden="">Learn more</option>
+                    <option value="I'd like to know more about Cognitopia">Cognitopia</option>
+                    <option value="I'd like to know more about the Goal Guide">Goal Guide</option>
+                    <option value="I'd like to know more about the Picture Planner">Picture Planner</option>
+                    <option value="I'd like to know more about ScanDo!">ScanDo!</option>
                 </select>
+                <div class="form_submit">
+                    <button class="default_button" type="submit">Submit</button>
+                </div>
             </form>
-            <div class="form_submit">
-                <button class="default_button" type="button">Submit</button>
-            </div>
         </div>
     </div>
 </body>

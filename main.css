@@ -50,6 +50,7 @@ body {
             height:        32px;
             padding-bottom: 2px;
             padding-right:  0px;
+            padding-left:    2%;
         }
         .head_link {
             text-decoration: none;
@@ -59,7 +60,6 @@ body {
             height:        32px;
             padding-left:  2%;
             padding-right: 2%;
-            
         }
 
 
@@ -118,22 +118,11 @@ body {
     margin-bottom: 50px;   
 }
 
-.carousel_button {
-    background: none;
-    box-shadow: none;
-    top: -60px;
-    border:     none;
-    height:     60;
-    width:      60;
-
-}
-    .carousel_button:active {
-        
-    }
-
 .default_button {
     border:     none;
     outline:    none;
+    cursor:     pointer;
+    cursor:     hand;
     
     border-radius: 6px;
     
@@ -149,11 +138,7 @@ body {
     font-size:         22pt;
     color:          #FFFFFF;
     white-space:        pre;
-    text-transform: uppercase;
 }
-    .default_button:active {
-        
-    }
 
 .arrow_image  { width: 8%; min-width: 80px; max-width: 100px; }
 .blue_arrow {
@@ -204,6 +189,8 @@ body {
         
         border: none;
         outline: none;
+        cursor: pointer;
+        cursor: hand;
         
         height: 32px;
         border-radius: 5px;
@@ -299,6 +286,8 @@ body {
 }
 .right_column_fill, .left_column_fill {
     width: 40%;
+    padding-right: 20px;
+    padding-left:  20px;
     min-width: 250px;
     vertical-align: middle;
 }
@@ -309,7 +298,7 @@ body {
     }
     .large_product_content_image {
         width: 100%;
-        max-width: 400px;
+        max-width: 300px;
     }
     
 
@@ -368,7 +357,7 @@ body {
         margin-bottom: 40px;
     }
     .column_large_image {
-        width: 200px;
+        width: 230px;
         margin-bottom: 30px;
         
         border: 5px solid white;
@@ -383,7 +372,7 @@ body {
     .column_button {
         /* center buttons to bottom of div */
         position:    absolute;
-        bottom:           0px;
+        bottom:           4px;
         left:             0px;
         right:            0px;
         margin-left:     auto;
@@ -453,10 +442,6 @@ body {
         padding-top:    50px;
         padding-bottom: 50px;
     }
-
-#test {
-    
-}
 
 /* ----- Individual Panel Work ----- */
 /* Home Page */
